@@ -70,7 +70,6 @@ a:hover {
     width: 300px;
     padding: 50px 0px 0px 0px;
     background-color: #bcd381;
-    /* background-color: rgb(203, 237, 208);   */
 }
 
 
@@ -81,7 +80,6 @@ a:hover {
     margin-top: 20px;
     margin-bottom: 20px !important;
     background-color: #bcd381!important; 
-    /* background-color: rgb(203, 237, 208) !important; */
     border: 0px !important;
 }
 
@@ -104,18 +102,15 @@ a:hover {
     padding: 10px 0;
     align-items: center;
     text-align: center !important;
-    /* background-color:rgb(9, 52, 33); */
 }
 
 .navbar-brand {
-    /* font-family: 'Toren Rotalic'; */
     font-family: 'Yatra One', cursive;
     font-style: normal;
     display: inline-block !important;
     margin: 0 auto;
     vertical-align: middle;
     color: #888d2a;
-    /* color: rgb(251, 239, 91); */
     font-size: 48px;
     display: inline-block !important;
 } 
@@ -159,16 +154,13 @@ a:hover {
     display: flex;
     padding: 10px 0;
     justify-content: center; 
-    /* justify-content: space-between; */
     background-color: #bcd381;
-    /* background-color:  rgb(203, 237, 208); */
  
 }
 
 .js-form-container {
     display: flex;
     background-color: #bcd381;
-    /* background-color: rgb(203, 237, 208); */
     justify-content: center;
 }
 
@@ -185,12 +177,10 @@ a:hover {
     border-radius: 25px;
     display: flex;
     color: black;
-    /* color: blueviolet;  */
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
     background-color: #888d2a;
-    /* background: rgba(33,224,163,1); */
 }
 
 .js-search-btn:hover {
@@ -206,8 +196,6 @@ a:hover {
     border-radius: 25px;
     color: black;
     background-color: #888d2a;
-    /* color: blueviolet;  */
-    /* background: rgba(33,224,163,1); */
 }
 
 .js-reset-btn:hover {
@@ -229,13 +217,12 @@ a:hover {
         font-size: 12px;
     }
 
-    .navbar-brand {
-        font-size: 48px;
+    a.navbar-brand {
+        font-size: 36px;
     }
 
     .logo {
         display: block;
-        /* vertical-align: middle; */
         height: 50px;
         width: 55px;
         max-width: 90%;

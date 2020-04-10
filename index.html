@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" 
-  type="image/png" 
-  href="images/weed-eyes.png">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Adopt and Chill</title>
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Yatra+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:700i&display=swap" rel="stylesheet">
+    <title>ADOPT AND CHILL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylessheets/styles.css">
-
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="contents-container">
-    <nav class="navbar-expand">
-        <div class="logo">
+    <header>
+        <h1 class="header-text">Adopt and Chill</h1>
+        <img src="assets/header-squiggle.png">
+    </header>
+
+    <section class="directions-section">
+
+        <div class="text-content">
+                1. Enter a zipcode
         </div>
-        <a class="navbar-brand" href="">Adopt and Chill</a>
-        <div class="logo">
+        <div class="zipcode-button"></div>
+        
+    
+    
+        <div class="directions">
+            <div class="directions-text">
+                    2. Select a marijuana species            
+            </div>
         </div>
-    </nav>
+    
+        <div class="directions">
+            <div class="directions-text">
+                3. Get strain and adoptable dog recomendations    
+            </div>
+        </div>
 
-<div class="text-content">Enter your zip code and click on your favorite marijuana species for strain and adoptable shelter dog recommendations</div>
-    <div class="zipcode-button"></div>
-    <div class="card-z"></div>       
-</div>
+    </section>
 
 
-<!-- seperate footer from everything else! -->
-<footer>
-    <div class="container">
-        <p>Created by Aylor Brown, Austin Dryden, and Eva Montgomery. All rights reserved.
-        <br><br>
-        Dog Avatars created by Jack Made/Noun Project
-        <br>
-        Marijuana created by ProSymbols/Noun Project
-        <br><br>
-        All content on Adopt and Chill is for educational and entertainment purposes only. 
-            This site is for mature audiences only. We strongly encourage users under 18 years 
-            of age to exit this site immediately! Obey all local laws & support your local animal shelters! 
-        </p>
+    
+
+
+    <div class="card-z-container">
+        <div class="card-z"></div>  
     </div>
-</footer>
+
+
+
+    <footer>
+        <p>
+            Created by Aylor Brown, Austin Dryden, and Eva Montgomery
+        </p>
+        <br>
+        <p>
+            Dog Avatars created by Jack Made/Noun Project
+            <br>
+            Marijuana created by ProSymbols/Noun Project
+        </p>
+        <br>      
+        <p>
+            All content on Adopt and Chill is for educational and entertainment purposes only. This site is for mature audiences only. We strongly encourage users under 18 years of age to exit this site immediately! Obey all local laws & support your local animal shelters!
+        </p>
+    </footer>
+
+
+    <div class="stamps">
+        <!-- this is where the stamps go -->
+    </div>
+    
     <script src="scripts/config.js"></script>
     <script src="scripts/dogarray.js"></script>
-    <script src="scripts/strain.js"></script>    
+    <script src="scripts/stamps.js"></script>
+    <script src="scripts/strain.js"></script>
+
 </body>
 </html>

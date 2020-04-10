@@ -2,7 +2,7 @@
 
 let STRAINNAME;
 let STRAINEFFECTS;
-let LOCATION="30307";
+let LOCATION="30308";
 let DOGCALLS;
 let BREEDARRAY=[];
 let cardDeck = document.querySelector(".card-z");
@@ -34,16 +34,16 @@ function formBuilder(){
     let input1 = document.createElement("input");
     input1.className = "js-search-input";
     input1.type = "text";
-    input1.placeholder = "Enter your Zip Code";
+    input1.placeholder = "30308";
 
     let input2 = document.createElement("input");
     input2.className = "js-search-btn";
     input2.type = "submit";
 
-    let reset = document.createElement("button");
-    reset.className = "js-reset-btn reset-btn";
-    reset.textContent = "Reset";
-    reset.addEventListener("click", resetPage);
+    // let reset = document.createElement("button");
+    // reset.className = "js-reset-btn reset-btn";
+    // reset.textContent = "Reset";
+    // reset.addEventListener("click", resetPage);
 
     form.appendChild(input1);
     form.appendChild(input2);
@@ -57,7 +57,7 @@ function formBuilder(){
     });
 
     domArr.push(form);
-    domArr.push(reset);
+    // domArr.push(reset);
     return domArr;
 }
 // createLoadingDOM() creates a "Loading, please wait" card to be used while waiting on API calls.
@@ -66,7 +66,7 @@ function createLoadingDOM(){
     card.className = "js-card-title";
     
     let img = document.createElement("img");
-    img.src = "images/weed-eyes.png";
+    img.src = "assets/weed-eyes.png";
     img.className = "js-card-img-top";
     img.alt = "weed leaf";
 
@@ -91,7 +91,7 @@ function createRaceDOMs(){
     
         let img = document.createElement('img');
         img.className = "js-card-img-top";
-        img.src = `images/${race.toLowerCase()}-dog.png`;
+        img.src = `assets/${race.toLowerCase()}-dog.png`;
         img.alt = `${race} dog`;
         
         let h5 = document.createElement('h5');
@@ -145,7 +145,7 @@ function makeAllStrains(strainArr){
         card.strainName = newStrain.name;
 
         let img = document.createElement("img");
-        img.src = "images/noun_Marijuana_2183514.png";
+        img.src = "assets/noun_Marijuana_2183514.png";
         img.className = "js-card-img-top";
         img.alt = "weed leaf";
 
@@ -175,7 +175,7 @@ function makeSomeStrains(strainArr){
             card.strainName = newStrain.name;
     
             let img = document.createElement("img");
-            img.src = "images/noun_Marijuana_2183514.png";
+            img.src = "assets/noun_Marijuana_2183514.png";
             img.className = "js-card-img-top";
             img.alt = "weed leaf";
 
@@ -218,7 +218,7 @@ function clearCardDeck(passThru){  //empties the primary container, so that it c
 function clearBarDeck(){
     let textToReset = document.querySelector(".js-search-input");
     textToReset.value = "";
-    LOCATION = "30307";
+    LOCATION = "30308";
 }
 
 // selectRandomStrain(strainArr) takes in an array of strains from an API call, randomly selects one, sets global STRAINNAME variable, and returns the id of selected strain.
@@ -241,16 +241,16 @@ function createSingleStrainDOM(infoArr){
     card.className = "js-card-title";
     
     let h5 = document.createElement("h5");
-    h5.className = "js-card-title";
+    h5.className = "js-card-title-results";
     h5.textContent = "Your new Bud!";
 
     let img = document.createElement("img");
-    img.src = "images/noun_Marijuana_2183514.png";
+    img.src = "assets/noun_Marijuana_2183514.png";
     img.className = "js-card-img-top";
     img.alt = "weed leaf";
 
     let p1 = document.createElement('p');
-    p1.className = "js-card-text";
+    p1.className = "js-card-text-strainname";
     p1.textContent = STRAINNAME;
     
     let p2 = document.createElement('p');
@@ -289,7 +289,7 @@ function effectText(effectObj){
     for (let effect of effectObj.medical){
         medEffects = medEffects + effect + " ";
     }
-    let effectString = `Effects <br> Positive: <br> ${posiEffects} <br> Negative: <br> ${negEffects} <br> Medical:<br> ${medEffects}`;
+    let effectString = `<br><br> Effects <br><br> Positive: <br> ${posiEffects} <br><br> Negative: <br> ${negEffects} <br><br> Medical:<br> ${medEffects} <br><br><br>`;
     // let effectString = "Effects \n Positive: \n" + posiEffects + "\n Negative \n" + negEffects + "\n Medical \n"+ medEffects;
     return effectString;
 }
@@ -385,9 +385,9 @@ function buildNoDogDOM(){
     h5.textContent = "We are so sorry but we can't find the right dog for you...";
 
     let img = document.createElement("img");
-    img.src = "images/weed-eyes.png";
+    img.src = "assets/weed-eyes.png";
     img.className = "js-card-img-top";
-    img.alt = "weed dog.";
+    img.alt = "weed dog";
 
     card.appendChild(h5);
     card.appendChild(img);
@@ -407,12 +407,12 @@ function buildDogDOM(dogCard){
     card.className = "js-card-title";
     
     let h5 = document.createElement("h5");
-    h5.className = "js-card-title";
+    h5.className = "js-card-title-results";
     h5.textContent = "Your new Best Bud!";
 
     let img = document.createElement("img");
     if(!dogCard.photos[0]){ //if petfinder API doesn't have any photos for dog, use default
-        img.src = "images/weed-eyes.png";
+        img.src = "assets/weed-eyes.png";
     }else{
         img.src = dogCard.photos[0].full;
     }
@@ -420,7 +420,7 @@ function buildDogDOM(dogCard){
     img.alt = "your new best bud!";
 
     let p1 = document.createElement('p');
-    p1.className = "js-card-text";
+    p1.className = "js-card-text-dogname";
     p1.textContent = dogCard.name;
     
     let p2 = document.createElement('p');
@@ -428,7 +428,7 @@ function buildDogDOM(dogCard){
     p2.textContent = dogCard.breeds.primary;
     
     let p3 = document.createElement('p');
-    p3.className = "js-card-text";
+    p3.className = "js-card-text-desc";
     p3.textContent = dogCard.description;
     
     let a = document.createElement('a');

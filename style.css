@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box; 
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@font-face {
+    font-family: "Necto Mono";
+    src: url(type/NectoMono-Regular.otf), url(type/Necto-Mono.woff2), url(type/Necto-Mono.woff);
+}
+
+@font-face {
+    font-family: "Nova Mono";
+    src: url(type/NovaMono-Regular.ttf);
+}
+
+
+
+body {
+    font-family: "Necto Mono";
+    font-size: 32px;
+    line-height: 1.25;
+
+    background-color: #E9EFC3;
+    color: black;
+    overflow-x: hidden;
+}
+
+header {
+    margin: 68px;
+}
+
+h1.header-text {
+    font-family: "Necto Mono";
+    font-size: 48px;
+    letter-spacing: 5px;
+    color: #02AC57;
+}
+
+
+
+.text-content { 
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+::selection {
+    background-color: #02AC57;
+    color: white;
+}
+
+
+.zipcode-button {
+    display: flex;
+    justify-content: center;
+}
+
+.js-zipcode-button {
+    flex-direction: column;
+}
+
+.js-search-input {
+    display: flex;
+    text-align: center;
+    margin: 5px 0 5px 30px;
+    width: 125px;
+    background-color: #E3D0E3;
+}
+
+.js-search-btn {
+    display: flex;
+    color: white;
+    font-size: 24px;
+    margin: 5px 0 5px 10px;
+    background-color: #02AC57;
+}
+
+.js-search-btn:hover {
+    background-color: #E9EFC3;
+    color: #02AC57;
+    border-color: #02AC57;
+}
+
+/* .js-reset-btn {
+    font-family: "Theinhardt Regular";
+    display: flex;
+    color: white;
+    width: 75px;
+    font-size: 24px;
+    margin: 5px 0 5px 10px;
+    
+    background-color: #02AC57;
+}
+
+.js-reset-btn:hover {
+    background-color: #E9EFC3;
+    color: #02AC57;
+    border-color: #02AC57;
+} */
+
+.js-form-container {
+    display: flex;
+    /* background-color: #bcd381; */
+    justify-content: center;
+}
+
+
+
+.directions {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.directions-text {
+    width: 400px;
+}
+
+
+
+
+
+.card-z-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.card-img-top, .js-card-img-top {
+    display: inline-block;
+    width: 250px;
+    margin: 100px 0 60px 0;
+    cursor: pointer;
+}
+
+.card-img-top, .js-card-img-top:hover {
+    padding: 20px;
+    border: 5px solid #02AC57;
+}
+
+
+h5 {
+    color: #02AC57;
+}
+
+h5:hover {
+    text-decoration: underline;
+    text-decoration-color: #02AC57;
+}
+
+h5.js-card-title-results {
+    margin-top: 100px;
+}
+
+.js-card-text {
+    font-size: 24px;
+    text-align: left;
+    width: 400px;
+}
+
+p.js-card-text-strainname {
+    margin-bottom: 20px;
+}
+
+p.js-card-text-dogname {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p.js-card-text-desc {
+    font-size: 24px;
+    width: 400px;
+    margin: 20px 0 20px 0;
+}
+
+
+a.js-adopt-button {
+    font-size: 24px;
+    background-color: #02AC57;
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+}
+
+a.js-adopt-button:hover {
+    background-color: #E9EFC3;
+    color: #02AC57;
+    border: 1px solid #02AC57;
+}
+
+ 
+
+footer {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+
+    margin: 100px 68px 100px 68px;
+    padding: 20px;
+    /* max-width: 600px; */
+
+    background-color: #02AC57;
+    color: white;
+
+    border: 5px solid white;
+}
+
+footer:hover {
+    background-color: #E9EFC3;
+    color: #02AC57;
+    border: 5px solid #02AC57;
+
+}
+
+.stamps {
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    width: 50%;
+}
+
+.stamps img {
+    position: absolute;
+    animation: spin 30s linear infinite;
+}
+
+@media screen and (min-width: 769px) {
+
+
+    .card-z  {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-evenly;
+
+        width: 100%;
+        padding: 50px;
+    }
+
+    footer { 
+        font-size: 12px;
+        margin: 300px 300px 50px 300px;
+    }
+
+    
+    .directions-text {
+        width: 800px;
+    }
+
+    .js-card-text {
+        text-align: center;
+        width: 500px;
+    } 
+}
+
+
+
+
+
+

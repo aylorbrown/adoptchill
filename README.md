@@ -174,14 +174,6 @@ Adds CSS rotation to the stamps
 }
 ```
 
-### Mobile Version 
-
-![gif2](assets/demo-mobile.gif)
-
-
-
-
-
 ### APIs USED 
 * Petfinder API - https://www.petfinder.com/developers/api-docs
 * The Strain Marijuana strains API - https://strains.evanbusse.com/

@@ -67,7 +67,7 @@ h1.header-text {
     display: flex;
     text-align: center;
     margin: 5px 0 5px 30px;
-    width: 125px;
+    width: 135px;
     background-color: #E3D0E3;
 }
 
@@ -228,6 +228,27 @@ footer:hover {
 .stamps img {
     position: absolute;
     animation: spin 30s linear infinite;
+}
+
+@media screen and (max-width: 414px) {
+    .js-card-text {
+        justify-content: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 300px;
+    }
+
+    p.js-card-text-desc {
+        width: 300px;
+        text-align: left;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
 }
 
 @media screen and (min-width: 769px) {

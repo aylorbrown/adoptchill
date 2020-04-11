@@ -174,6 +174,11 @@ Adds CSS rotation to the stamps
 }
 ```
 
+### Mobile Version 
+
+![gif2](assets/demo-mobile.gif)
+
+
 
 
 
